@@ -1,0 +1,380 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+/* ---- Customised scroll bar ---- */
+/* width */
+::-webkit-scrollbar {
+    width: 15px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
+}
+   
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #A5D7E8; 
+    border-radius: 10px;
+}
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #4ab9e2; 
+}
+
+/* ---- Loader Component ---- */
+#loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #4ab9e2;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+  
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+  
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+  
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 } 
+    to { bottom:0px; opacity:1 }
+}
+  
+@keyframes animatebottom { 
+    from{ bottom:-100px; opacity:0 } 
+    to{ bottom:0; opacity:1 }
+}
+
+/* #root{
+    display: none;
+} */
+
+body{
+    background-color: #16213e;
+    color: aliceblue;
+    font-family: 'Varela Round', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Navigation Component */
+header{
+    /* display: inline-flex; */
+    /* flex-flow: wrap; */
+    display: grid;
+    grid-template-columns: 25% 45% 20% 10%;
+    justify-content: stretch;
+    padding: 15px 50px;
+    color: aliceblue;
+    position: sticky;
+    box-shadow: 0 2px 20px -2px rgba(0,0,0,.2);
+    overflow: hidden;
+    
+}
+
+.logo{
+    padding: 14px 10px;
+    text-align: center;
+}
+
+nav li{
+    list-style-type: none;
+    display: inline-flex;
+}
+
+nav a{
+    text-decoration: none;
+    padding: 14px 10px;
+    margin: 0 25px;
+    color: inherit;
+    text-align: center;
+}
+
+nav a:hover{
+    color: #A5D7E8;
+    letter-spacing: 1px;
+    transition: 0.5s ease-in;
+}
+
+.social-nav ul {
+    list-style-type: none;
+    display: inline-flex;
+    
+}
+
+.social-nav a{
+    text-decoration: none;
+    color: inherit;
+    float: right;
+    text-align: center;
+    padding: 14px 10px;
+    font-size: 20px;
+    justify-content: space-evenly;
+
+}
+
+.social-nav a:hover{
+    color: #A5D7E8;
+    
+}
+
+.theme-change{
+    padding: 14px 10px;
+    font-size: 20px;
+}
+
+.showcase{
+    display: grid;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 130px 150px 0px;
+    
+}
+
+.showcase > text{
+    position: relative;
+    
+}
+
+
+.showcase h1{
+    font-size: 4em;
+    line-height: 70px;
+    
+}
+
+.showcase h2{
+    font-size: 2em;
+    line-height: 50px;
+}
+
+.showcase p{
+    font-size: 1.5em;
+    line-height: 40px;
+    margin-bottom: 50px;
+}
+
+.showcase a{
+    text-decoration: none;
+    color: inherit;
+    border: solid #A5D7E8;
+    border-radius: 40px;
+    padding: 15px;
+    margin: 40px 0px;
+}
+
+.showcase a:hover{
+    /* border: solid ; */
+    background-color: #A5D7E8;
+    color: #16213E;
+    transition: 0.7s ease-in-out;
+}
+
+.section{
+    display: grid;
+}
+
+.heading{
+    text-align: center;
+}
+
+.container{
+    display: grid;
+    padding: 100px;
+}
+
+#About > .container{
+    grid-template-columns: 60% 40%;
+    gap: 30px ;
+}
+
+.container > .text{
+    padding-top: 50px ;
+    font-size: 0.9rem;
+    line-height: 25px;
+    justify-content: center;
+    
+}
+.container > .photo{
+    text-align: center;
+}
+
+.photo img{
+    border: solid #A5D7E8 5px;
+    border-radius: 40px;
+}
+
+#skills > .container{
+    text-align: center;
+}
+
+#Skills > .container ul{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-auto-rows: 150px;
+    list-style: none;
+    text-align: center;
+}
+
+.skill-icons li :hover{
+    width: 40%;
+    transition: 0.7s ease-in-out;
+}
+
+.featured{
+    display: grid;
+    /* grid-template-rows: ; */
+    /* row-gap: 50px; */
+}
+
+.feat-card{
+    padding: 50px;
+}
+
+/* .feat-card-img{
+    
+} */
+
+.feat-card-title{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding: 20px;
+    color: #4ab9e2;
+}
+
+.feat-card-links{
+    text-align: end;
+    padding: 10px;
+}
+
+.feat-card-links a{
+    text-decoration: none;
+    color: #4ab9e2;
+    border: 2px solid ;
+    border-radius: 50px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.feat-card-links a:hover{
+    color: #16213E;
+    background-color: #4ab9e2;
+}
+
+.feat-card-body{
+    padding: 10px;
+    justify-content: center;
+
+}
+
+.feat-card-foot{
+    padding: 10px;
+}
+
+.feat-card-foot ul{
+    list-style-type: none;
+    display: inline-flex;
+}
+
+.feat-card-foot li{
+    margin-right: 20px;
+    font-size: 12px;
+   font-style: italic;
+    
+}
+
+.others{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    /* grid-auto-rows: 150px; */
+    gap: 30px;
+    padding-top: 70px;
+}
+
+.card{
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.card-main{
+    padding: 20px;
+    
+}
+
+.card-header{
+    display: grid;
+    grid-template-columns: 100%;
+    margin-bottom: 10px;
+
+}
+
+.card-img{
+    /* display: inline-block; */
+}
+
+.card-links{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding: 10px;
+    text-align: center;
+    
+}
+
+.card-title{
+    color: #4ab9e2;
+    margin-bottom: 10px;
+}
+
+.card-body{
+    justify-content: center;
+    margin-bottom: 50px;
+   
+}
+
+/* .card-foot{
+   margin-bottom: 10px;
+} */
+
+.card-foot ul{
+    list-style-type: none;
+    display: inline-flex;
+}
+
+.card-foot li{
+    margin-right: 20px;
+    font-size: 12px;
+   font-style: italic;
+    
+}
