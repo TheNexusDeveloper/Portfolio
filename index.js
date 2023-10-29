@@ -8,3 +8,10 @@ function showPage (){
     document.getElementById('loader').style.display = 'none'
     document.getElementById('root').style.display = 'block'
 }
+
+function themeChanger(){
+    var element = document.body
+    element.classList.toggle("light-mode")
+    document.getElementById("light").style.display = 'none'
+    document.getElementById("dark").style.display = 'block'
+}
