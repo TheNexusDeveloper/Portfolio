@@ -23,6 +23,8 @@
     <title>Kosy Okeke</title>
 </head>
 <body onload="loading()">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    
     <div id="loader"></div>
 
     <div id="root">
@@ -31,7 +33,7 @@
                 <h1>KOSY</h1>
             </div>
 
-            <nav>
+            <nav class="topnav">
                 <ul>
                     <li><a href="#About">About</a></li>
                     <li><a href="#Skills">Skills</a></li>
@@ -40,7 +42,7 @@
                 </ul>
             </nav>
 
-            <div class="social-nav">
+            <div id="social-nav" class="topnav">
                 <ul>
                     <li><a href="https://github.com/TheNexusDeveloper" target="_blank" rel="noopener"><i class="bi bi-github"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/kosisochukwu-okeke-505490242/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a></li>
@@ -49,26 +51,38 @@
                 </ul>
             </div>
 
-            <div class="theme-change" onclick="themeChanger()">
-                <i class="bi bi-moon theme" id="dark" ></i>
-    
-                <i class="bi bi-sun theme" id="light" ></i>
+            <div id="theme-change" class="topnav" onclick="themeChanger()">
+                <a href="javascript:void(0);" class="icon" onclick="menuBar()">
+                    <i class="bi bi-moon theme" id="dark" ></i>
+                     <!-- <i class="bi bi-sun theme" id="light" ></i> -->
+                </a>
             </div>
+
+            <div class="topnav" id="menu">
+                <a href="javascript:void(0);" class="icon" onclick="menuBar()">
+                    <i class="bi bi-list"></i>
+                    <!-- <i class="bi bi-x-lg"></i>  -->
+                  </a>
+            </div>
+
         </header>
 
         <main>
             <div class="showcase">
-                <div class="text">
-                    <h2>Hey there! my name is </h2>
-                    <h1>KOSY OKEKE</h1>
-                    <h1>Software Developer </h1>
-                    <p>
-                        A software Developer with major focus on Front-End Web development, Backend development, 
-                        network design and infrastructure, cloud computing and DevOps Engineering.
-                    </p>
-    
-                    <a href="Resume - Kosisochukwu Okeke.pdf" target="_blank">Get My Resume </a>
+                <div class="container">
+                    <div class="showcase-text">
+                        <h2>Hey there 🫡, My name is </h2>
+                        <h1>KOSY OKEKE</h1>
+                        <h1>Software Developer </h1>
+                        <p>
+                            A software Developer with major focus on Front-End Web development, Backend development, 
+                            network design and infrastructure, cloud computing and DevOps Engineering.
+                        </p>
+        
+                        <a href="Resume - Kosisochukwu Okeke.pdf" target="_blank">Get My Resume </a>
+                    </div>
                 </div>
+                
 
             </div>
 
@@ -138,100 +152,102 @@
                 
             </div>
 
-            <div class="section" id="Projects">
+            <!-- <div class="section" id="Projects">
                 <div class="heading">
                     <h2>--- Projects ---</h2>
                 </div>
 
                 <div class="container">
-                    <div class="featured">
-                        <div class="feat-card">
-                            <div class="feat-card-img">
-                                <img src="images/Screenshot.png" alt="project-image" loading="lazy" >
-                            </div>
-                            <div class="feat-card-title">
-                                <h1>Project Name</h1>
-
-                                <div class="feat-card-links">
-                                    <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="github.com" target="_blank">Live Demo</a>
+                    <div class="featured"> 
+                        <div>
+                            <div class="feat-card">
+                                <div class="feat-card-img">
+                                    <img src="images/Screenshot.png" alt="project-image" loading="lazy" width="100%" >
+                                </div>
+                                <div class="feat-card-title">
+                                    <h1>Project Name</h1>
+    
+                                    <div class="feat-card-links">
+                                        <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
+                                        <a href="github.com" target="_blank">Live Demo</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="feat-card-body">
+                                    <p>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', 
+                                        making it look like readable English.
+                                    </p>
+                                </div>
+                                <div class="feat-card-foot">
+                                    <ul>
+                                        <li>React</li>
+                                        <li>Django</li>
+                                        <li>Bootstarp</li>
+                                        <li>Django-Rest-Framework</li>
+                                    </ul>
                                 </div>
                             </div>
-                            
-                            <div class="feat-card-body">
-                                <p>
-                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                                    The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', 
-                                    making it look like readable English.
-                                </p>
-                            </div>
-                            <div class="feat-card-foot">
-                                <ul>
-                                    <li>React</li>
-                                    <li>Django</li>
-                                    <li>Bootstarp</li>
-                                    <li>Django-Rest-Framework</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="feat-card">
-                            <div class="feat-card-img">
-                                <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
-                            </div>
-                            <div class="feat-card-title">
-                                <h1>Project Name</h1>
-
-                                <div class="feat-card-links">
-                                    <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="github.com" target="_blank">Live Demo</a>
+    
+                            <div class="feat-card">
+                                <div class="feat-card-img">
+                                    <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
+                                </div>
+                                <div class="feat-card-title">
+                                    <h1>Project Name</h1>
+    
+                                    <div class="feat-card-links">
+                                        <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
+                                        <a href="github.com" target="_blank">Live Demo</a>
+                                    </div>
+                                </div>
+                               
+                                <div class="feat-card-body">
+                                    <p>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', 
+                                        making it look like readable English.
+                                    </p>
+                                </div>
+                                <div class="feat-card-foot">
+                                    <ul>
+                                        <li>React</li>
+                                        <li>Django</li>
+                                        <li>Bootstarp</li>
+                                        <li>Django-Rest-Framework</li>
+                                    </ul>
                                 </div>
                             </div>
-                           
-                            <div class="feat-card-body">
-                                <p>
-                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                                    The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', 
-                                    making it look like readable English.
-                                </p>
-                            </div>
-                            <div class="feat-card-foot">
-                                <ul>
-                                    <li>React</li>
-                                    <li>Django</li>
-                                    <li>Bootstarp</li>
-                                    <li>Django-Rest-Framework</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="feat-card">
-                            <div class="feat-card-img">
-                                <img src="images/Screenshot 3.png" alt="project-image" loading="lazy">
-                            </div>
-                            <div class="feat-card-title">
-                                <h1>Project Name</h1>
-
-                                <div class="feat-card-links">
-                                    <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="github.com" target="_blank">Live Demo</a>
+    
+                            <div class="feat-card">
+                                <div class="feat-card-img">
+                                    <img src="images/Screenshot 3.png" alt="project-image" loading="lazy">
                                 </div>
-                            </div>
-                           
-                            <div class="feat-card-body">
-                                <p>
-                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
-                                    The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', 
-                                    making it look like readable English.
-                                </p>
-                            </div>
-                            <div class="feat-card-foot">
-                                <ul>
-                                    <li>React</li>
-                                    <li>Django</li>
-                                    <li>Bootstarp</li>
-                                    <li>Django-Rest-Framework</li>
-                                </ul>
+                                <div class="feat-card-title">
+                                    <h1>Project Name</h1>
+    
+                                    <div class="feat-card-links">
+                                        <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
+                                        <a href="github.com" target="_blank">Live Demo</a>
+                                    </div>
+                                </div>
+                               
+                                <div class="feat-card-body">
+                                    <p>
+                                        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. 
+                                        The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', 
+                                        making it look like readable English.
+                                    </p>
+                                </div>
+                                <div class="feat-card-foot">
+                                    <ul>
+                                        <li>React</li>
+                                        <li>Django</li>
+                                        <li>Bootstarp</li>
+                                        <li>Django-Rest-Framework</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
 
@@ -241,219 +257,219 @@
                         <h3>--- Some other projects ---</h3>
                     </div>
 
-                    <div class="others">
-                        
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
-                                </div>
-
-                                <div class="card-links">
-                                    <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="github.com" target="_blank">Live Demo</a>
-                                </div>
-                            </div>
-                            
-                            <div class="card-main">
-                                <div class="card-title">
-                                    <h1>Project Name</h1>
+                    <div class="others"> 
+                        <div>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
+                                    </div>
+    
+                                    <div class="card-links">
+                                        <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
+                                        <a href="github.com" target="_blank">Live Demo</a>
+                                    </div>
                                 </div>
                                 
-                                <div class="card-body">
-                                    <p>
-                                        It is a long established fact that a reader will be distracted 
-                                        by the readable content of a page when looking at its layout. 
-                                    </p>
+                                <div class="card-main">
+                                    <div class="card-title">
+                                        <h1>Project Name</h1>
+                                    </div>
+                                    
+                                    <div class="card-body">
+                                        <p>
+                                            It is a long established fact that a reader will be distracted 
+                                            by the readable content of a page when looking at its layout. 
+                                        </p>
+                                    </div>
+                                    <div class="card-foot">
+                                        <ul>
+                                            <li>React</li>
+                                            <li>Django</li>
+                                            <li>Bootstarp</li>
+                                            <li>Django-Rest-Framework</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-foot">
-                                    <ul>
-                                        <li>React</li>
-                                        <li>Django</li>
-                                        <li>Bootstarp</li>
-                                        <li>Django-Rest-Framework</li>
-                                    </ul>
-                                </div>
+                               
                             </div>
-                           
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
-                                </div>
-
-                                <div class="card-links">
-                                    <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="github.com" target="_blank">Live Demo</a>
-                                </div>
-                            </div>
-                            
-                            <div class="card-main">
-                                <div class="card-title">
-                                    <h1>Project Name</h1>
+    
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
+                                    </div>
+    
+                                    <div class="card-links">
+                                        <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
+                                        <a href="github.com" target="_blank">Live Demo</a>
+                                    </div>
                                 </div>
                                 
-                                <div class="card-body">
-                                    <p>
-                                        It is a long established fact that a reader will be distracted 
-                                        by the readable content of a page when looking at its layout. 
-                                    </p>
+                                <div class="card-main">
+                                    <div class="card-title">
+                                        <h1>Project Name</h1>
+                                    </div>
+                                    
+                                    <div class="card-body">
+                                        <p>
+                                            It is a long established fact that a reader will be distracted 
+                                            by the readable content of a page when looking at its layout. 
+                                        </p>
+                                    </div>
+                                    <div class="card-foot">
+                                        <ul>
+                                            <li>React</li>
+                                            <li>Django</li>
+                                            <li>Bootstarp</li>
+                                            <li>Django-Rest-Framework</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-foot">
-                                    <ul>
-                                        <li>React</li>
-                                        <li>Django</li>
-                                        <li>Bootstarp</li>
-                                        <li>Django-Rest-Framework</li>
-                                    </ul>
-                                </div>
+                               
                             </div>
-                           
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
-                                </div>
-
-                                <div class="card-links">
-                                    <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="github.com" target="_blank">Live Demo</a>
-                                </div>
-                            </div>
-                            
-                            <div class="card-main">
-                                <div class="card-title">
-                                    <h1>Project Name</h1>
+    
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
+                                    </div>
+    
+                                    <div class="card-links">
+                                        <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
+                                        <a href="github.com" target="_blank">Live Demo</a>
+                                    </div>
                                 </div>
                                 
-                                <div class="card-body">
-                                    <p>
-                                        It is a long established fact that a reader will be distracted 
-                                        by the readable content of a page when looking at its layout. 
-                                    </p>
+                                <div class="card-main">
+                                    <div class="card-title">
+                                        <h1>Project Name</h1>
+                                    </div>
+                                    
+                                    <div class="card-body">
+                                        <p>
+                                            It is a long established fact that a reader will be distracted 
+                                            by the readable content of a page when looking at its layout. 
+                                        </p>
+                                    </div>
+                                    <div class="card-foot">
+                                        <ul>
+                                            <li>React</li>
+                                            <li>Django</li>
+                                            <li>Bootstarp</li>
+                                            <li>Django-Rest-Framework</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-foot">
-                                    <ul>
-                                        <li>React</li>
-                                        <li>Django</li>
-                                        <li>Bootstarp</li>
-                                        <li>Django-Rest-Framework</li>
-                                    </ul>
-                                </div>
+                               
                             </div>
-                           
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
-                                </div>
-
-                                <div class="card-links">
-                                    <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="github.com" target="_blank">Live Demo</a>
-                                </div>
-                            </div>
-                            
-                            <div class="card-main">
-                                <div class="card-title">
-                                    <h1>Project Name</h1>
+    
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
+                                    </div>
+    
+                                    <div class="card-links">
+                                        <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
+                                        <a href="github.com" target="_blank">Live Demo</a>
+                                    </div>
                                 </div>
                                 
-                                <div class="card-body">
-                                    <p>
-                                        It is a long established fact that a reader will be distracted 
-                                        by the readable content of a page when looking at its layout. 
-                                    </p>
+                                <div class="card-main">
+                                    <div class="card-title">
+                                        <h1>Project Name</h1>
+                                    </div>
+                                    
+                                    <div class="card-body">
+                                        <p>
+                                            It is a long established fact that a reader will be distracted 
+                                            by the readable content of a page when looking at its layout. 
+                                        </p>
+                                    </div>
+                                    <div class="card-foot">
+                                        <ul>
+                                            <li>React</li>
+                                            <li>Django</li>
+                                            <li>Bootstarp</li>
+                                            <li>Django-Rest-Framework</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-foot">
-                                    <ul>
-                                        <li>React</li>
-                                        <li>Django</li>
-                                        <li>Bootstarp</li>
-                                        <li>Django-Rest-Framework</li>
-                                    </ul>
-                                </div>
+                               
                             </div>
-                           
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
-                                </div>
-
-                                <div class="card-links">
-                                    <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="github.com" target="_blank">Live Demo</a>
-                                </div>
-                            </div>
-                            
-                            <div class="card-main">
-                                <div class="card-title">
-                                    <h1>Project Name</h1>
+    
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
+                                    </div>
+    
+                                    <div class="card-links">
+                                        <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
+                                        <a href="github.com" target="_blank">Live Demo</a>
+                                    </div>
                                 </div>
                                 
-                                <div class="card-body">
-                                    <p>
-                                        It is a long established fact that a reader will be distracted 
-                                        by the readable content of a page when looking at its layout. 
-                                    </p>
+                                <div class="card-main">
+                                    <div class="card-title">
+                                        <h1>Project Name</h1>
+                                    </div>
+                                    
+                                    <div class="card-body">
+                                        <p>
+                                            It is a long established fact that a reader will be distracted 
+                                            by the readable content of a page when looking at its layout. 
+                                        </p>
+                                    </div>
+                                    <div class="card-foot">
+                                        <ul>
+                                            <li>React</li>
+                                            <li>Django</li>
+                                            <li>Bootstarp</li>
+                                            <li>Django-Rest-Framework</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-foot">
-                                    <ul>
-                                        <li>React</li>
-                                        <li>Django</li>
-                                        <li>Bootstarp</li>
-                                        <li>Django-Rest-Framework</li>
-                                    </ul>
-                                </div>
+                               
                             </div>
-                           
-                        </div>
-
-                        <div class="card">
-                            <div class="card-header">
-                                <div class="card-img">
-                                    <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
-                                </div>
-
-                                <div class="card-links">
-                                    <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
-                                    <a href="github.com" target="_blank">Live Demo</a>
-                                </div>
-                            </div>
-                            
-                            <div class="card-main">
-                                <div class="card-title">
-                                    <h1>Project Name</h1>
+    
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="card-img">
+                                        <img src="images/Screenshot 2.png" alt="project-image" loading="lazy">
+                                    </div>
+    
+                                    <div class="card-links">
+                                        <a href="github.com" target="_blank"><i class="bi bi-github"></i></a>
+                                        <a href="github.com" target="_blank">Live Demo</a>
+                                    </div>
                                 </div>
                                 
-                                <div class="card-body">
-                                    <p>
-                                        It is a long established fact that a reader will be distracted 
-                                        by the readable content of a page when looking at its layout. 
-                                    </p>
+                                <div class="card-main">
+                                    <div class="card-title">
+                                        <h1>Project Name</h1>
+                                    </div>
+                                    
+                                    <div class="card-body">
+                                        <p>
+                                            It is a long established fact that a reader will be distracted 
+                                            by the readable content of a page when looking at its layout. 
+                                        </p>
+                                    </div>
+                                    <div class="card-foot">
+                                        <ul>
+                                            <li>React</li>
+                                            <li>Django</li>
+                                            <li>Bootstarp</li>
+                                            <li>Django-Rest-Framework</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <div class="card-foot">
-                                    <ul>
-                                        <li>React</li>
-                                        <li>Django</li>
-                                        <li>Bootstarp</li>
-                                        <li>Django-Rest-Framework</li>
-                                    </ul>
-                                </div>
+                               
                             </div>
-                           
+                
                         </div>
-            
-                       
                     </div>
 
                     
@@ -463,7 +479,7 @@
                     <a href="https://github.com/TheNexusDeveloper?tab=repositories">See more awesome projects on Github   <i class="bi bi-github"></i></a>
                     
                 </div>
-            </div>
+            </div> -->
 
             <div class="section" id="Contact">
                 <div class="heading">
