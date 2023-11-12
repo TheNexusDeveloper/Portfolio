@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 img{
     max-width: 100%;
 }
@@ -267,7 +271,7 @@ header{
 }
 
 .feat-card{
-    padding: 0px;
+    margin-bottom: 20px;
   
 }
 
