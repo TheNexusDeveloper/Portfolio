@@ -658,12 +658,8 @@ footer ul{
   }
 
   #About > .container{
-    grid-template-columns: repeat(auto-fit, minmax(1fr, 200px));
-    justify-items: center;
-    gap: 2rem ;
+    display: block;
     overflow: hidden;
-
-    /* issue with 500px screens*/
     }
 }
 
